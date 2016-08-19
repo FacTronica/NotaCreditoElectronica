@@ -1,0 +1,15 @@
+
+
+##############################################################                                                 
+#######    REFERENCIAS                                                                                         
+##############################################################                                                 
+# folio del documento referenciado
+$doc_referencia["1"]["FolioRef"]="4775";                                                                     
+# Tipo de Documento Referenciado 33=FacturaElectronica
+$doc_referencia["1"]["TpoDocRef"]="33";                                                                      
+# Comentario de la Referencia
+$doc_referencia["1"]["RazonRef"]="Anula Factura 4775";                                                           
+# 1=Anula 2=CorrigeValores 3=CorrigeTextos
+$doc_referencia["1"]["CodRef"]="1";
+# Fecha del Documento referenciado formato aaaa-mm-dd
+$doc_referencia["1"]["FchRef"]="2016-04-28"; 
