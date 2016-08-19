@@ -3,7 +3,7 @@
 ####### DATOS DEL SERVIDOR
 ##############################################################
 # URL DEL WEBSERVICE SERVIDOR EJ. http://www.factronica.cl/factronica_webservice_servidor_beta
-$CONFACTRONICA["URLHOST"]="http://190.107.177.194/~ws760578134/servidor001";
+$CONFACTRONICA["URLHOST"]="http://190.107.177.194/~ws777777777/servidor001";
 # SCRIPT DEL SERVIDOR EJ. index.php
 $CONFACTRONICA["URLFILE"]="index.php";
 # PUERTO DE COMUNICACION ej.80
@@ -57,8 +57,7 @@ $nom_proveedor="FACTRONICA";
 #                                                                                                              
 # RUL DEL PROVEEDOR DE FACTURA ELECTRONICA QUE APARECE AL PIE DEL PDF                                          
 $url_proveedor="";                                                                            
-                                                                                                               
-                                                                                                               
+
 ##############################################################                                                 
 ####### NOMBRES DIRECTORIOS DE ALMACENAMIENTO LOCAL Y REMOTO                                                   
 ##############################################################                                                 
@@ -225,22 +224,7 @@ $Receptor["Contacto"]="juan perez";//"";
 # CORREO RECEPTOR                                                                                              
 $Receptor["CorreoRecep"]="contacto@factronica.cl";
 #                                                                                                              
-                                                                                                               
-##############################################################                                                 
-#######   IMPUESTOS ADICIONALES  (TOTALIZADORES POR TIPO)                                                      
-##############################################################                                                 
-#                                                                                                              
-# TIPO DE IMPUESTO 27                                                                                          
-#$ImptoReten["27"]["TipoImp"]="27";                                                                            
-#$ImptoReten["27"]["TasaImp"]="23";                                                                            
-#$ImptoReten["27"]["MontoImp"]="34456";                                                                        
-#                                                                                                              
-# TIPO DE IMPUESTO 271                                                                                         
-#$ImptoReten["271"]["TipoImp"]="271";                                                                          
-#$ImptoReten["271"]["TasaImp"]="18";                                                                           
-#$ImptoReten["271"]["MontoImp"]="77777";                                                                       
-                                                                                                               
-                                                                                                               
+
 ##############################################################                                                 
 #######   TOTALES                                                                                              
 ##############################################################                                                 
@@ -259,21 +243,7 @@ $Totales["IVA"]="2286";
 #                                                                                                              
 # MONTO TOTAL BRUTO                                                                                            
 $Totales["MntTotal"]="14319";
-#                                                                                                              
-##############################################################                                                 
-#######   DESCUENTOS GLOBALES                                                                                  
-##############################################################                                                 
-#$DscRcgGlobal["1"]["NroLinDR"]="1";                                                                           
-#$DscRcgGlobal["1"]["TpoMov"]="D"; // D=DESCUENTO R=RECARGO                                                    
-#$DscRcgGlobal["1"]["GlosaDR"]="Descuento Global";                                                             
-#$DscRcgGlobal["1"]["TpoValor"]="%"; // tipo descuento %=en porcentaje                                         
-#$DscRcgGlobal["1"]["ValorDR"]="50"; // descuento en porcentaje                                                
-#$DscRcgGlobal["1"]["ValorDROtrMnda"]="500000";  // descuento en pesos                                         
-#$DscRcgGlobal["1"]["IndExeDR"]="0";// 0=descuento a items afectos 1=descuento a items exentos                 
-                                                                                                               
-                                                                                                               
-                                                                                                               
-                                                                                                               
+
 ##############################################################                                                 
 #######    DETALLE                                                                                             
 ##############################################################                                                 
@@ -293,18 +263,21 @@ $detalle["1"]["DescuentoPct"]="0";
 $detalle["1"]["DscItemPesos"]="0";
 $detalle["1"]["IndExe"]="0";
 
-                                                                                                               
-                                                                                                               
-                                                                                                               
+
 ##############################################################                                                 
 #######    REFERENCIAS                                                                                         
 ##############################################################                                                 
-#$doc_referencia["1"]["FolioRef"]="12321";                                                                     
-#$doc_referencia["1"]["TpoDocRef"]="801";                                                                      
-#$doc_referencia["1"]["RazonRef"]="Orden de Compra";                                                           
-#$doc_referencia["1"]["CodRef"]="";# SOLO APLICA A NOTAS DE CREDITO Y DEBITO                                   
-#$doc_referencia["1"]["FchRef"]="2016-04-28";                                                                  
-                                                                                                               
+# folio del documento referenciado
+$doc_referencia["1"]["FolioRef"]="4775";                                                                     
+# Tipo de Documento Referenciado 33=FacturaElectronica
+$doc_referencia["1"]["TpoDocRef"]="33";                                                                      
+# Comentario de la Referencia
+$doc_referencia["1"]["RazonRef"]="Anula Factura 4775";                                                           
+# 1=Anula 2=CorrigeValores 3=CorrigeTextos
+$doc_referencia["1"]["CodRef"]="1";
+# Fecha del Documento referenciado formato aaaa-mm-dd
+$doc_referencia["1"]["FchRef"]="2016-04-28";                                                                  
+
 ##############################################################                                                 
 #######   DATOS CERTIFICADO DE PERSONA QUE FIRMA Y ENVIA                                                       
 ##############################################################                                                 
@@ -326,34 +299,6 @@ $certificado["Exponent"]="AQAB
 $certificado["X509Certificate"]="MIIGSzCCBTOgAwIBAgIKHynmewAAAASOcTANBgkqhkiG9w0BAQUFADCB0jELMAkG
 A1UEBhMCQ0wxHTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQH
 EwhTYW50aWFnbzEUMBIGA1UEChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9y
-aWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQDEydFLUNFUlRDSElMRSBDQSBGSVJN
-QSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEWGHNjbGllbnRlc0Bl
-LWNlcnRjaGlsZS5jbDAeFw0xNjA3MjUxMzQxNDNaFw0xOTA3MjUxMzQxNDNaMIHO
-MQswCQYDVQQGEwJDTDEvMC0GA1UECAwmTUFHQUxMQU5FUyBZIERFIExBIEFOVMOB
-UlRJQ0EgQ0hJTEVOQSAxEzARBgNVBAcTCk1hZ2FsbGFuZXMxFDASBgNVBAoTC3Rz
-IGxpbWl0YWRhMRUwEwYDVQQLEwxjb250YWJpbGlkYWQxKDAmBgNVBAMTH3Zlcm9u
-aWNhIHBhbWVsYSAgdG9ycmVzIGFsY2FsbGExIjAgBgkqhkiG9w0BCQEWE3NtYXJ0
-aW5lekBjb2FzZXMuY2wwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANuTPeOp
-fEeMf/CPwr2OWVlKMJ4AJotoPwAlDjy/cjrzLkScph6FUWNnJfmyM4q4yEtPcTqL
-r1y+Zb+UM0Is/5ZHheH8loIrFvlhMf+u6Bm7plHKg9R9TRVWJYNA3dxsNb2E7EVm
-vVzAYAM2h5LRhIGhXoLFZvx83tLI5+dikZ15AgMBAAGjggKnMIICozA9BgkrBgEE
-AYI3FQcEMDAuBiYrBgEEAYI3FQiC3IMvhZOMZoXVnReC4twnge/sPGGBmucVhq/g
-FQIBZAIBBDAdBgNVHQ4EFgQUZLN8HpokN8QJj7EZnGPz3/rC2scwCwYDVR0PBAQD
-AgTwMB8GA1UdIwQYMBaAFHjhPp/SErN6PI3NMA5Ts0MpB7NVMD4GA1UdHwQ3MDUw
-M6AxoC+GLWh0dHA6Ly9jcmwuZS1jZXJ0Y2hpbGUuY2wvZWNlcnRjaGlsZWNhRkVT
-LmNybDA6BggrBgEFBQcBAQQuMCwwKgYIKwYBBQUHMAGGHmh0dHA6Ly9vY3NwLmVj
-ZXJ0Y2hpbGUuY2wvb2NzcDAjBgNVHREEHDAaoBgGCCsGAQQBwQEBoAwWCjExODQ4
-MzE5LTcwIwYDVR0SBBwwGqAYBggrBgEEAcEBAqAMFgo5NjkyODE4MC01MIIBTQYD
-VR0gBIIBRDCCAUAwggE8BggrBgEEAcNSBTCCAS4wLQYIKwYBBQUHAgEWIWh0dHA6
-Ly93d3cuZS1jZXJ0Y2hpbGUuY2wvQ1BTLmh0bTCB/AYIKwYBBQUHAgIwge8egewA
-QwBlAHIAdABpAGYAaQBjAGEAZABvACAARgBpAHIAbQBhACAAUwBpAG0AcABsAGUA
-LgAgAEgAYQAgAHMAaQBkAG8AIAB2AGEAbABpAGQAYQBkAG8AIABlAG4AIABmAG8A
-cgBtAGEAIABwAHIAZQBzAGUAbgBjAGkAYQBsACwAIABxAHUAZQBkAGEAbgBkAG8A
-IABoAGEAYgBpAGwAaQB0AGEAZABvACAAZQBsACAAQwBlAHIAdABpAGYAaQBjAGEA
-ZABvACAAcABhAHIAYQAgAHUAcwBvACAAdAByAGkAYgB1AHQAYQByAGkAbzANBgkq
-hkiG9w0BAQUFAAOCAQEAVnfgK1xR4AvyZeamjjZjFPStvhl88E8zz6jaxXLlFNDd
-7kAGpXPqfvCu5KNxHjQbJWiuSarh7XlW5HbTkQBenl0KQNvBjsQrvzBDj5HD8eo/
-+11yx6q1iu+rwEFgbn3b+ipoajFNMgib3kP1ZKn2uZac44pjiYjHT+sDt2vtrYUw
 dHOWnoUV+lNNKKsfI0OTqQDvFQ5dasp+GhypO3LNGWfC5S9PZi246Q4/6HyXdF+U
 2DHgwUO0j729nP/SZ/w8G6GpJtsG8swp6TcLrftVTEyOlwya37O6bZGFJYHSzmMR
 /sppfb06gH1y+ONIYiyTPtjYJpPt8dMV/KVE/JW5uw==";
@@ -363,13 +308,6 @@ dHOWnoUV+lNNKKsfI0OTqQDvFQ5dasp+GhypO3LNGWfC5S9PZi246Q4/6HyXdF+U
 $certificado["PrivKey"]="-----BEGIN RSA PRIVATE KEY-----
 MIICXQIBAAKBgQDbkz3jqXxHjH/wj8K9jllZSjCeACaLaD8AJQ48v3I68y5EnKYe
 hVFjZyX5sjOKuMhLT3E6i69cvmW/lDNCLP+WR4Xh/JaCKxb5YTH/rugZu6ZRyoPU
-fU0VViWDQN3cbDW9hOxFZr1cwGADNoeS0YSBoV6CxWb8fN7SyOfnYpGdeQIDAQAB
-AoGBALYUsbu6bi6+2dFYxXp/MqSSmyJKqavs9GFgWSAS+dzcj7+hzzd8AnPVs24O
-UiN0+9NHu3N7Jh5YXPOzJ5Z2zjH8aoJB2UWyXf4iM3Uio8e2MFG5/RiaYid0PY0I
-+a70vpMIc2sxjUs8dqTOdBUBhNHKJnhAPLkDvNRR36R1X/EBAkEA/SVP5NvDhRkq
-Yhb9W8Xvq1S6qVW9XHHCeBa55Wj6vLEQNdk8Flt3zt+mWY3saeizJSpqXsKGCHm0
-6qehsIugEQJBAN4NB8xmgz2UI5QQkG6yARdppJJ0ptcrrVr6HrqbQQ22emIHC4OT
-DzUnr2pOfV5DgXaFdq8ki9t2de723ID8DukCQQCNW2yFq4I+rJLSO2w29wyia6ng
 LRSUrqGdVXNw+3IoM+eNakT3ZxQ73P+TOoEtkteWhVzolU8rJGs2LW1InG9BAkBT
 hZ04Uhrtb6pOSEi7inMEpnUDraMP7lrfjJNAZ6N5j/jKpJG9JPSkbs/5cZqQeV3a
 AeuZh2qf2xgTEYHxdl35AkBRoBTl+zYP89XA+15foXQzLfLuTCeA3bWlMdgpVpeM
