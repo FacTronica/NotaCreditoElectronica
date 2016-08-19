@@ -1,5 +1,6 @@
+Para generar nota de crédito, el proceso es similar a crear facturas, solo que en este caso las referencia son obligatorias.
 
-
+Ejemplo:
 ##############################################################                                                 
 #######    REFERENCIAS                                                                                         
 ##############################################################                                                 
