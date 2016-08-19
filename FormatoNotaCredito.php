@@ -114,10 +114,10 @@ $CONFACTRONICA["SETDTEFIRMADO_SII"]="SETFIRMADOSII_RUT89428000-K_TIPO33_FOLIO38.
 ##############################################################                                                 
 #                                                                                                              
 # RUT DEL CONTRIBUYENTE EMISOR                                                                                 
-$caratula["RutEmisor"]="76057813-4";
+$caratula["RutEmisor"]="7777777-7";
 #                                                                                                              
 # RUT AUTORIZADO A ENVIAR DTES AL SII SIEMPRE ES RUT DE PERSONA NO DE EMPRESA                                  
-$caratula["RutEnvia"]="11848319-7";
+$caratula["RutEnvia"]="33333333-3";
 #                                                                                                              
 # RUT DEL SII 60803000-K (SIEMPRE VA AQUI EL RUT DEL SII)                                                      
 $caratula["RutReceptor"]="60803000-K";                                                                         
@@ -145,16 +145,10 @@ $IdDoc["FchVenc"]="2016-08-05";
 $IdDoc["TermPagoGlosa"]="CONTADO";
 #                                                                                                              
 # TIPO DE DOCUMENTO FV=33, ND=56, NC=61                                                                        
-$IdDoc["TipoDTE"]="33";
+$IdDoc["TipoDTE"]="61";
 #                                                                                                              
 # FOLIO DEL DOCUMENTO                                                                                          
 $IdDoc["Folio"]="38";
-#                                                                                                              
-# PARA USO EN GUIA DESPACHO                                                                                    
-$IdDoc["TipoDespacho"]="";
-#                                                                                                              
-# PARA USO EN GUIA DESPACHO                                                                                    
-$IdDoc["IndTraslado"]="";
 #                                                                                                              
 # INDICADOR DE LINEAS EN VALORES BRUTOS 1=SI 0=NO                                                              
 $IdDoc["MntBruto"]="1";
@@ -164,13 +158,13 @@ $IdDoc["MntBruto"]="1";
 ##############################################################                                                 
 #                                                                                                              
 # RUT EMISOR                                                                                                   
-$Emisor["RUTEmisor"]="76057813-4";
+$Emisor["RUTEmisor"]="77777777-7";
 #                                                                                                              
 # RAZON SOCIAL EMISOR                                                                                          
-$Emisor["RznSoc"]="T Y S CHILE ";//T&S CHILE";
+$Emisor["RznSoc"]="EMPRESA LTDA";
 #                                                                                                              
 # GIRO EMISOR                                                                                                  
-$Emisor["GiroEmis"]="LETREROS, DISEÑOS.";
+$Emisor["GiroEmis"]="MARKETING";
 #                                                                                                              
 # CODIGO PRINCIPAL DE ACTIVIDAD COMERCIAL                                                                      
 $Emisor["Acteco"]="202900";
@@ -179,7 +173,7 @@ $Emisor["Acteco"]="202900";
 $Emisor["CdgSIISucur"]="12205";
 #                                                                                                              
 # DIRECCION EMISOR                                                                                             
-$Emisor["DirOrigen"]="SEÑORET NRO 102";
+$Emisor["DirOrigen"]="ALAMEDA 340";
 #                                                                                                              
 # COMUNA EMISOR                                                                                                
 $Emisor["CmnaOrigen"]="PUNTA ARENAS";
@@ -188,35 +182,35 @@ $Emisor["CmnaOrigen"]="PUNTA ARENAS";
 $Emisor["CiudadOrigen"]="PUNTA ARENAS";
 #                                                                                                              
 # EMAIL EMISOR                                                                                                 
-$Emisor["CorreoEmisor"]="ventas1@tsletreros.cl";
+$Emisor["CorreoEmisor"]="ventas1@MARKETING.cl";
 #                                                                                                              
 # WEB EMISOR                                                                                                   
-$Emisor["Web"]="www.tsletreros.cl";
+$Emisor["Web"]="www.MARKETIING.cl";
 #                                                                                                              
 # FONO EMISOR                                                                                                  
-$Emisor["Telefono"]="+56 61 2218092";
+$Emisor["Telefono"]="22334455";
 #                                                                                                              
 ##############################################################                                                 
 #######   RECEPTOR                                                                                             
 ##############################################################                                                 
 #                                                                                                              
 # RUT RECEPTOR                                                                                                 
-$Receptor["RUTRecep"]="89428000-K";
+$Receptor["RUTRecep"]="33333333-3";
 #                                                                                                              
 # RAZON SOCIAL RECEPTOR                                                                                        
-$Receptor["RznSocRecep"]="AEROVIAS DAP S. A.";
+$Receptor["RznSocRecep"]="RECEPTOR PRUEBAS LTDA.";
 #                                                                                                              
 # GIRO RECEPTOR                                                                                                
-$Receptor["GiroRecep"]="TRANSPORTE AEREO DE CARGA Y PA";
+$Receptor["GiroRecep"]="SERVICIOS VARIOS";
 #                                                                                                              
 # DIRECCION RECEPTOR                                                                                           
-$Receptor["DirRecep"]="O HIGGINS 891";
+$Receptor["DirRecep"]="PROVIDENA 8877";
 #                                                                                                              
 # COMUNA RECEPTOR                                                                                              
-$Receptor["CmnaRecep"]="PUNTA ARENAS";
+$Receptor["CmnaRecep"]="SANTIAGO";
 #                                                                                                              
 # CIUDAD RECEPTOR                                                                                              
-$Receptor["CiudadRecep"]="PUNTA ARENAS";
+$Receptor["CiudadRecep"]="SANTIAGO";
 #                                                                                                              
 # CONTACTO RECEPTOR                                                                                            
 $Receptor["Contacto"]="juan perez";//"";
@@ -321,11 +315,11 @@ Dj8kJefDsk1wryMlF7SPBXxAEIrTYUR91wgj21b5DYSK
 #######   CARGAR DATOS DE TIMBRAJE DE FOLIOS                                                                   
 ##############################################################                                                 
 # RUT EMISOR                                                                                                   
-$CAF["RE"]="76057813-4";
+$CAF["RE"]="777777-7";
 #                                                                                                              
 #                                                                                                              
 # RAZON SOCIAL EMISOR                                                                                          
-$CAF["RS"]="T Y S LIMITADA";
+$CAF["RS"]="PRUEBA LIMITADA";
 #                                                                                                              
 #                                                                                                              
 # TIPO DE DOCUMENTO                                                                                            
