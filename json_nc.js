@@ -1,58 +1,99 @@
-{
-"TOKEN" : "sutokendeacceso",
-"RUTEMISOR":"33333333-3",
-"ACCION": "INSERTAR",
-"DOCUMENTO":"NOTACREDITO",
-"FOLIODTE":"",
-"TIPODTE":"61",
-"FECHADTE":"",
-"LLAVEDTE":"",
-"FORMATO_PDF":"TICKET",
-"RUTCLI":"66666666-6",
-"RAZONSOCIAL":"LOS LAURELES SPA",
-"GIRO":"SERVICIOS VARIOS",
-"DIRECCION":"AV. LAS PRUEBAS 3322",
-"COMUNA":"HUECHURABA",
-"CONTACTO":"JUAN LOPEZ",
-"CORREO":"correo@dominio.CL",
-"TELEFONO":"55443322",
-"IDCONDVENTA":"1",
-"IDMEDIOPAGO":"1",
-"IDVENDEDOR":"2",
-"VENTA_ANTICIPADA":"0",
-"ID_PROYECTO":"1",
-"IDSUCURSAL":"1",
-"IDBODEGA":"1",
-"TIPOTOTAL": "1",
-"NETO": "0",
-"EXENTO": "2100",
-"IVA": "0",
-"TOTAL": "2100",
-"OBS":"VENTA EN TERRENO",
-"MEDIOPAGOTEXTO":["EFECTIVO","CHEQUE"],
-"MEDIOPAGOMONTO":["5000","20000"],
-"CODIGO":["10001","10001"],
-"DESCRIPCION":["Papas","Zapallo"],
-"CANTIDAD":["2.5","10"],
-"UNDMED":["Kilo","Unid"],
-"UNITARIO":["1001","502"],
-"DESCUENTO_PORC":["10","15"],
-"DESCUENTO_PESOS":["101","77"],
-"SUBTOTAL":["2500","5000"],
-"NroLinRef":["1"],  
-"TpoDocRef":["39"],  
-"IndGlobal":["0"],  
-"FolioRef":["1289"],  
-"FchRef":["2020-09-17"],  
-"CodRef":["1"],  
-"RazonRef":["Anula Boleta"],  
-"SMTP_HOST":"mail.dominio.cl",
-"SMTP_PORT":"587",
-"SMTP_SECURE":"tls",
-"SMTP_USER":"correo@dominio.cl",
-"SMTP_PASS":"clavemail",
-"CORREO_CC1":"copia1@dominio.cl",
-"CORREO_CC2":"copia2@dominio.cl",
-"CORREO_CCO1":"copiaoculta1@dominio.cl",
-"CORREO_CCO2":"copiaoculta2@dominio.cl"
-}
+<?php
+#
+# DEPURACION DE ERRORES
+error_reporting(E_ERROR|E_WARNING);
+ini_set('display_errors', '1');
+#
+# LIBRERIA CURL PARA ENVIAR JSON
+include("../curl/clase_envia_json.php");
+#
+# CONFIGURACION DEL PUERTO 443 o 80
+$FACTRONICA["CURL_PUERTO"]="443";
+#
+# ARRAY JSON CON DATOS DE NOTA DE CREDITO
+$arregloJson = array(
+"TOKEN" => "SUTOKENACCESO",
+"RUTEMISOR"=>"11222333-4",
+"ACCION" => "INSERTAR",
+"DOCUMENTO"=>"NOTACREDITO",
+"FOLIODTE"=>"",					// SI VA VACIO EL FOLIO LO ASIGNA LA API
+"TIPODTE"=>"61",
+"FECHADTE"=>"",					// SI LA FECHA VA VACIA LA API ASIGNA LA FECHA ACTUAL
+"LLAVEDTE"=>"",
+"FORMATO_PDF"=>"TICKET",
+"RUTCLI" =>"76606716-6",
+"RAZONSOCIAL" =>"FACTRONICA SPA",
+"GIRO" =>"SERVICIOS INFORMATICOS",
+"DIRECCION" =>"LAS BELLOTAS 199 OF.62",
+"COMUNA" =>"PROVIDENCIA",
+"CONTACTO" =>"PATRICIO DIAZ",
+"CORREO" =>"CONTACTO@FACTRONICA.CL",
+"TELEFONO" =>"56957231148",
+"IDCONDVENTA" =>"1",
+"IDMEDIOPAGO" =>"1",
+"IDVENDEDOR" =>"1",
+"VENTA_ANTICIPADA"=>"0",
+"ID_PROYECTO"=>"1",
+"IDSUCURSAL"=>"1",
+"IDBODEGA"=>"1",
+"TIPOTOTAL" => "0",
+"NETO" => "10000",
+"EXENTO" => "0",
+"IVA" => "1900",
+"TOTAL" => "11190",
+"OBS" =>"CLIENTE DEVOLVIO EL PRODUCTO",
+"MEDIOPAGOTEXTO"=>array("EFECTIVO"),
+"MEDIOPAGOMONTO"=>array("1190"),
+"CODIGO"=>array("10001","10001","10001","10001","10001"),
+"DESCRIPCION"=>array("PAPAS","PERAS","UVAS","DURAZNOS","LIMONES"),
+"CANTIDAD"=>array("3","1","2","1","3"),
+"UNDMED"=>array("kg.","kg.","kg.","kg.","kg."),
+"UNITARIO"=>array("1000","1000","1000","1000","1000"),
+"DESCUENTO_PORC"=>array("","","","",""),
+"DESCUENTO_PESOS"=>array("","","","",""),
+"SUBTOTAL"=>array("3000","1000","2000","1000","3000"),
+"NroLinRef"=>"1",				// NUMERO DE REFERENCIA ( LINEA 1 )
+"TpoDocRef"=>"39",				// DOCUMENTO AL CUAL REFERENCIA ( 39=BOLETA ELECTRONICA )
+"IndGlobal"=>"0",				// SIEMPRE EN CERO ( SOLO APLICA PARA ANULAR FACTURAS )
+"FolioRef"=>"1289",				// FOLIO DE LA BOLETA QUE ESTÁ ANULANDO
+"FchRef"=>"2020-09-17",			// FECHA DE LA BOLETA QUE ESTÁ ANULANDO
+"CodRef"=>"1",  				// 1=ANULABOLETA  2=CORRIGETEXTO   3=CORRIGEVALORES
+"RazonRef"=>"Anula Boleta", 	// COMENTARIO INDICANDO MOTIVO DE LA ANULACIÓN
+"SMTP_HOST"=>"smtp.nn.com",
+"SMTP_PORT"=>"465",
+"SMTP_SECURE"=>"ssl",
+"SMTP_USER"=>"n@nn.cl",
+"SMTP_PASS"=>"nn",
+"CORREO_CC1"=>"nn@nn.com",
+"CORREO_CC2"=>"nn@nn.cl",
+"CORREO_BCC1"=>"nn@nn.com",
+"CORREO_BCC2"=>"nn@nn.com",
+"CORREO_RESPUESTA"=>"nn@nn.cl",
+"PROVEEDOR_NOMBRE"=>"FACTRONICA SPA",
+"PROVEEDOR_MAIL"=>"soporte@factronica.cl",
+"PROVEEDOR_WEB"=>"www.factronica.cl",
+"PROVEEDOR_FONO"=>"56957231148"
+);
+#
+# URL DE DESTINO DEL SERVIDOR DE FACTURACIÓN ELECTRÓNICA
+$url="https://servidor3.factronica.cl/api/venta_remota/recibe_json.php";
+#
+# ENVIAR JSON AL SERVIDOR
+$retorno=JsonEnviar($arregloJson,$url);
+#
+# TRANSFORMAR LA RESPUESTA EN UN ARREGLO
+$jsonArray  = json_decode($retorno,true);
+#
+# MOSTRAR LA RESPUESTA DE FORMA LEGIBLE
+echo "<pre>";
+var_dump($jsonArray);
+echo "</pre>";
+#
+# TRANSFORMAR A TEXTO LEGIBLE LA URL PARA DESCARGAR EL PDF
+$url_pdf=base64_decode($jsonArray["urlpdf"]);
+#
+# DESCARGAR PDF
+echo "<br>Descargar Pdf Desde=".$url_pdf;
+# 
+#
+?>
