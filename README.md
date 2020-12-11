@@ -18,3 +18,6 @@ En el siguiente link encontrará un xml de nota de crédito referenciando una fa
 <br>En el manual del sii para construcción del xml dte, se encuentra mayor información de tag mencionado.
 <br>En la página 31 del siguiente manual:
 <br>https://github.com/FacTronica/NotaCreditoElectronica/blob/master/formato_dte_201911.pdf
+<br>
+<br>Link del sii:
+<br>https://www.sii.cl/factura_electronica/factura_mercado/formato_dte_201911.pdf
