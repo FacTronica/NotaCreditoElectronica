@@ -37,13 +37,17 @@ $arregloJson = array(
 "IDSUCURSAL"=>"1",
 "IDBODEGA"=>"1",
 "TIPOTOTAL" => "0",
+  
 "NETO" => "10000",
 "EXENTO" => "0",
 "IVA" => "1900",
 "TOTAL" => "11190",
+  
 "OBS" =>"CLIENTE DEVOLVIO EL PRODUCTO",
+  
 "MEDIOPAGOTEXTO"=>array("EFECTIVO"),
 "MEDIOPAGOMONTO"=>array("1190"),
+  
 "CODIGO"=>array("10001","10001","10001","10001","10001"),
 "DESCRIPCION"=>array("PAPAS","PERAS","UVAS","DURAZNOS","LIMONES"),
 "CANTIDAD"=>array("3","1","2","1","3"),
@@ -52,13 +56,15 @@ $arregloJson = array(
 "DESCUENTO_PORC"=>array("","","","",""),
 "DESCUENTO_PESOS"=>array("","","","",""),
 "SUBTOTAL"=>array("3000","1000","2000","1000","3000"),
-"NroLinRef"=>"1",				// NUMERO DE REFERENCIA ( LINEA 1 )
-"TpoDocRef"=>"39",				// DOCUMENTO AL CUAL REFERENCIA ( 39=BOLETA ELECTRONICA )
-"IndGlobal"=>"0",				// SIEMPRE EN CERO ( SOLO APLICA PARA ANULAR FACTURAS )
-"FolioRef"=>"1289",				// FOLIO DE LA BOLETA QUE ESTÁ ANULANDO
-"FchRef"=>"2020-09-17",			// FECHA DE LA BOLETA QUE ESTÁ ANULANDO
-"CodRef"=>"1",  				// 1=ANULABOLETA  2=CORRIGETEXTO   3=CORRIGEVALORES
-"RazonRef"=>"Anula Boleta", 	// COMENTARIO INDICANDO MOTIVO DE LA ANULACIÓN
+
+"NroLinRef"=>array("1"),				// NUMERO DE REFERENCIA ( LINEA 1 )
+"TpoDocRef"=>array("39"),				// DOCUMENTO AL CUAL REFERENCIA ( 39=BOLETA ELECTRONICA )
+"IndGlobal"=>array("0"),				// SIEMPRE EN CERO ( SOLO APLICA PARA ANULAR FACTURAS )
+"FolioRef"=>array("1289"),				// FOLIO DE LA BOLETA QUE ESTÁ ANULANDO
+"FchRef"=>array("2020-09-17"),			// FECHA DE LA BOLETA QUE ESTÁ ANULANDO
+"CodRef"=>array("1"),  				// 1=ANULABOLETA  2=CORRIGETEXTO   3=CORRIGEVALORES
+"RazonRef"=>array("Anula Boleta"), 	// COMENTARIO INDICANDO MOTIVO DE LA ANULACIÓN
+ 
 "SMTP_HOST"=>"smtp.nn.com",
 "SMTP_PORT"=>"465",
 "SMTP_SECURE"=>"ssl",
